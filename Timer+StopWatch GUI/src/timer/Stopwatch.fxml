@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="stopwatchModePanel" prefHeight="200.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timer.StopwatchController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.199951171875" minWidth="10.0" prefWidth="205.199951171875" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="571.6000366210938" minWidth="10.0" prefWidth="494.800048828125" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <AnchorPane fx:id="stopwatchPanel" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #9AABAB;">
+               <children>
+                  <GridPane layoutX="148.0" layoutY="55.0" prefHeight="200.0" prefWidth="495.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="196.0" minHeight="10.0" prefHeight="154.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="95.0" minHeight="4.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXButton fx:id="startStopwatchButton" onAction="#startStopwatch" prefWidth="150.0" style="-fx-background-color: #262f7c;" text="Start" textFill="#9aabab" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="pauseStopwatchButton" layoutX="25.0" layoutY="172.0" onAction="#pauseStopwatch" prefWidth="150.0" style="-fx-background-color: #262f7c;" text="Pause" textFill="#9aabab" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="resetStopwatchButton" layoutX="183.0" layoutY="172.0" onAction="#resetStopwatch" prefWidth="150.0" style="-fx-background-color: #262f7c;" text="Reset" textFill="#9aabab" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="15.0" />
+                           </GridPane.margin>
+                        </JFXButton>
+                        <GridPane style="-fx-background-color: #;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="72.0" minHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="149.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text fill="#262f7c" strokeType="OUTSIDE" strokeWidth="0.0" text="Hours" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                              <Text fill="#262f7c" layoutX="10.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minutes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                              <Text fill="#262f7c" layoutX="175.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seconds" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #889999;" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <Text fx:id="stopwatchHoursTimer" layoutX="20.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+                                       <font>
+                                          <Font size="96.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #889999;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <Text fx:id="stopwatchMinutesTimer" layoutX="18.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+                                       <font>
+                                          <Font size="96.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #889999;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <Text fx:id="stopwatchSecondsTimer" layoutX="16.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+                                       <font>
+                                          <Font size="96.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #262f7c;">
+         <children>
+            <JFXButton fx:id="menuButton" layoutX="-4.0" onAction="#changeToMenu" prefHeight="200.0" prefWidth="213.0" text="Menu">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </children>
+</GridPane>
