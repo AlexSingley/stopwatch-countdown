@@ -26,7 +26,7 @@ public class MainUIController {
 
     @FXML
     void changeToCountdown(ActionEvent event) throws IOException {
-    	Parent countdownParent = FXMLLoader.load(getClass().getResource("Countdown.fxml"));
+    	Parent countdownParent = FXMLLoader.load(getClass().getResource("/src/timer/Countdown.fxml"));
     	Scene countdownScene = new Scene(countdownParent);
     	
     	//Below gets the stage info
@@ -37,7 +37,7 @@ public class MainUIController {
     
     @FXML
     void changeToStopwatch(ActionEvent event) throws IOException {
-    	Parent stopwatchParent = FXMLLoader.load(getClass().getResource("Stopwatch.fxml"));
+    	Parent stopwatchParent = FXMLLoader.load(getClass().getResource("/src/timer/Stopwatch.fxml"));
     	Scene stopwatchScene = new Scene(stopwatchParent);
     	
     	//Below gets the stage info

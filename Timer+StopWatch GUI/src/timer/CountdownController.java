@@ -140,7 +140,7 @@ public class CountdownController implements Initializable {
     
     @FXML
     void changeToMenu(ActionEvent event) throws IOException {
-    	Parent menuParent = FXMLLoader.load(getClass().getResource("MainUI.fxml"));
+    	Parent menuParent = FXMLLoader.load(getClass().getResource("/src/timer/MainUI.fxml"));
     	Scene menuScene = new Scene(menuParent);
     	
     	//Below gets the stage info
