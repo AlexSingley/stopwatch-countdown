@@ -5,16 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class Main extends Application	{
+	
 	@Override
-	public void start(Stage primaryStage) throws Exception	{
+	public void start(Stage window) throws Exception	{
 			Parent root = FXMLLoader.load(getClass().getResource("MainUI.fxml"));
 			Scene scene = new Scene(root);
-			primaryStage.initStyle(StageStyle.UNDECORATED);
-			primaryStage.setScene(scene);
-			primaryStage.show();
+			window.setScene(scene);
+			window.show();
 	}
 	
 	public static void main(String[] args)	{
